@@ -1,0 +1,2 @@
+php_value include_path "D:/Apache/Apache24/htdocs/Server/Interview/Angular/Class/"
+php_value auto_prepend_file "autoload_cli.php"

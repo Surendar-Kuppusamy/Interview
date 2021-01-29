@@ -1,0 +1,14 @@
+{
+    "require": {
+        "symfony/http-foundation": "^5.2",
+        "azi/envalid": "^1.0",
+        "catfan/medoo": "^1.7"
+    },
+	"autoload": {
+		"psr-4": {
+			"App\\": "app",
+			"DB\\": "db"
+		},
+		"classmap": ["include"]
+	}
+}

@@ -1,0 +1,8 @@
+.bg-login {
+    background-color: #fff;
+    max-width: 600px;
+    height: auto;
+    margin: 2em auto;
+    border-radius:8%;
+    padding: 2em;
+}
