@@ -24,10 +24,15 @@ class Signup extends \Singleton {
         ]);
 
         if($validator->failed()) {
-        return [
-                'status'  => 'error',
-                'message' => $validator->getErrors()
-            ];
+            //$azi_error = $validator->getErrors();
+            /* foreach($azi_error as $value) {
+                error_log('Key =>' $key);
+                error_log('Value =>' $value);
+            } */
+            return [
+                    'status'  => 'error',
+                    'message' => $validator->getErrors()
+                ];
         }
 
         $query = "INSERT INTO users (email, password) values('".$data['email']."', '".$data['password']."')";

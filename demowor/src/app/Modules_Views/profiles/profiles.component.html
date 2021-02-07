@@ -1,1 +1,25 @@
-<p>profiles works!</p>
+<h1>Profiles works!</h1>
+
+<form [formGroup]="form">
+    <div class="form-group">
+         <label for="male">
+            <input class="form-control" formControlName="gender" type="radio" [value]="'male'" id="male" />
+            Male
+         </label>
+    </div>
+    <div class="form-group">
+        <label for="female">
+           <input class="form-control" formControlName="gender" type="radio" [value]="'female'" id="female" />
+           Female
+        </label>
+   </div>
+    <div class="form-group">
+        <label for="check">
+            PHP
+            <input class="form-control" type="checkbox" formControlName="check" />
+        </label>
+    </div>
+</form>
+<div>
+    {{ form.value | json }}
+</div>

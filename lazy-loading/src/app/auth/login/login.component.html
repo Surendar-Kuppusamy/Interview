@@ -1,0 +1,21 @@
+<p>login works!</p>
+<div class="container">
+    <form [formGroup]="loginForm">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" class="form-control" formControlName="email" />
+        </div>
+        <div formArrayName="dynamic">
+            <div class="form-group" *ngFor="let dyn of dynamicValue.controls;let i=index" [formGroupName]="i">
+                <label for="{{i}}">Name</label>
+                <input type="text" id="{{i}}" class="form-control" formControlName="name" />
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-sm btn-primary" (click)="addDynamic()">Add</button>
+        </div>
+    </form>
+    <div>
+        {{ loginForm.value | json }}
+    </div>
+</div>
